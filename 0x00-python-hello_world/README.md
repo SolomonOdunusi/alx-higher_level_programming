@@ -1,4 +1,4 @@
-# Hello World - Python
+# Hello World - `Python`
 
 Tasks
 0. Run Python file

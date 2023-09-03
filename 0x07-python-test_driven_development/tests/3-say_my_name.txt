@@ -1,0 +1,62 @@
+# 3-say_my_name.txt
+
+# 3-say_my_name.py testcases
+
+Usage: python3 -m doctest -v ./tests/3-say_my_name.txt
+
+say_my_name: the func prints My name is <first name> <last name>
+
+Valid Inputs:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+print("My name is {} {}".format(first_name, last_name))
+
+*
+
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+
+*
+
+    >>> say_my_name("Solomon")
+    My name is Solomon 
+
+Second argument is optional
+
+Invalid Inputs:
+    >>> say_my_name(2, "Solomon")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+Checks for first_name
+
+*
+
+    >>> say_my_name("Solomon", 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+Checks for last_name
+
+*
+
+    >>> say_my_name(2, 4)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+Checks for first_name and last_name
+
+*
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Requires first_name

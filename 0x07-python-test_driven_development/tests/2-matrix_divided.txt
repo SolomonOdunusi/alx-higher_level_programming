@@ -1,0 +1,87 @@
+# 2-matrix_divided.txt
+
+# 2-matrix_divided.py testcases
+
+Usage: python3 -m doctest -v ./tests/2-matrix_divided.txt
+
+matrix_divided: divides all elements of a matrix
+Valid matrixes
+===============
+
+*
+    
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+This module contains one function, matrix_divided(matrix, div)
+
+*
+
+    >>> matrix = [
+    ...     [10.5, 20.2, 30.4],
+    ...     [40.8, 50.2, 6.50]
+    ... ]
+    >>> print(matrix_divided(matrix, 2))
+    [[5.25, 10.1, 15.2], [20.4, 25.1, 3.25]]
+
+This module can divide negative numbers
+
+*
+
+    >>> matrix = [
+    ...     [-10, -20, -30],
+    ...     [40.8, 50.2, 6.50]
+    ... ]
+    >>> print(matrix_divided(matrix, 2))
+    [[-5.0, -10.0, -15.0], [20.4, 25.1, 3.25]]
+
+Invalid matrixes
+================
+
+*
+
+    >>> matrix = "Solo Test"
+    >>> print(matrix_divided(matrix, 2))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+*
+
+    >>> matrix = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6, 7]
+    ... ]
+    >>> print(matrix_divided(matrix, 2))
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
+
+*
+
+    >>> matrix = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6],
+    ...     [7, 8, 9]
+    ... ]
+    >>> print(matrix_divided(matrix, "Solomon"))
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+*
+
+    >>> matrix = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6],
+    ...     [7, 8, 9]
+    ... ]
+    >>> print(matrix_divided(matrix, 0))
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero

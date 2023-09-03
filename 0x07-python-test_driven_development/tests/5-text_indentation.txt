@@ -1,0 +1,66 @@
+# 5-text_indentation.txt
+
+# 5-text_indentation.py testcases
+
+Usage: python3 -m doctest ./tests/5-text_indentation.txt
+
+text_indentation: function to print a text with 2 new lines after these characters: ., ? and :
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo?")
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <BLANKLINE>
+    Quonam modo?
+    <BLANKLINE>
+
+*
+
+    >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo. Utrum igitur tibi litteram videor an totas paginas commovere?")
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <BLANKLINE>
+    Quonam modo.
+    <BLANKLINE>
+    Utrum igitur tibi litteram videor an totas paginas commovere?
+    <BLANKLINE>
+
+*
+
+    >>> text_indentation("One? Two, three, four, five? Six, seven eight, nine, ten? Eleven, twelve.")
+    One?
+    <BLANKLINE>
+    Two, three, four, five?
+    <BLANKLINE>
+    Six, seven eight, nine, ten?
+    <BLANKLINE>
+    Eleven, twelve.
+    <BLANKLINE>
+
+*
+
+    >>> text_indentation("Lorem ipsum dolor sit amet, consectetur")
+    Lorem ipsum dolor sit amet, consectetur
+
+*
+
+    >>> text_indentation("\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis.")
+    <BLANKLINE>
+    <BLANKLINE>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <BLANKLINE>
+    Vestibulum sagittis.
+    <BLANKLINE>
+
+Invalid
+
+    >>> text_indentation(98)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+*
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+

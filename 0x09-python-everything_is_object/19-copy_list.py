@@ -2,6 +2,6 @@
 """Module that copies a list"""
 
 
-def copy_list(l):
+def copy_list(main_list):
     """func copies a list"""
-    return l.copy() 
+    return main_list.copy()

@@ -4,4 +4,4 @@
 
 def copy_list(l):
     """func copies a list"""
-    return l[:]
+    return l.copy() 

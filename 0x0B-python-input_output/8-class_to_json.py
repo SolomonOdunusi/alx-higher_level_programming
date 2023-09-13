@@ -1,4 +1,16 @@
 #!/usr/bin/python3
-def class_to_json(obj):
-    """the func returns the dict with simple data structure obj"""
-    return (obj.__dict__)
+""" My class module
+"""
+
+
+class MyClass:
+    """ My class
+    """
+    def __init__(self, name):
+        """ Init method"""
+        self.name = name
+        self.number = 0
+
+    def __str__(self):
+        """Str method"""
+        return ("[MyClass] {} - {:d}".format(self.name, self.number))

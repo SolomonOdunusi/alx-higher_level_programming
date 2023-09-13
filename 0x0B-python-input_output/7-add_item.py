@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""
-Write a script that adds all arguments to a Py list
-and then save them to a file
-"""
+"""Write a script that adds all arg to a Py list, and save them to a file"""
+
+
 import sys
 import os.path
 

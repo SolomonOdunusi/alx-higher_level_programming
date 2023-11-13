@@ -11,5 +11,5 @@ if (isNaN(size)) {
     }
     square += '\n';
   }
-  console.log(square);
+  console.log(square.trim());
 }

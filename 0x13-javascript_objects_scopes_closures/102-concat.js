@@ -6,7 +6,6 @@ if (process.argv.length !== 5) {
 }
 const [, , f1, f2, f3] = process.argv;
 
-
 fs.readFile(f1, 'utf8', (error1, data1) => {
   if (error1) {
     process.exit(1);

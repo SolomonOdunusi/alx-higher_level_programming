@@ -4,7 +4,7 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-
+    """ The main func to make connection """
     username, password, database = sys.argv[1], sysargv[2], sysargv[3]
 
     db = MySQLdb.connect(host='localhost',

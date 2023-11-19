@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""Link class to table in database 
+"""
+Link class to table in database
 """
 import sys
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
+
 
 class State(Base):
     """Class representing the 'states' table in the database."""

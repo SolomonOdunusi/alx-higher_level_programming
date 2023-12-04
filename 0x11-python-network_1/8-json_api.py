@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module that takes in a letter 
+""" Module that takes in a letter
 and sends a POST request
 """
 import requests
@@ -17,5 +17,5 @@ if __name__ == "__main__":
             print('[{}] {}'.format(req.json()['id'], req.json()['name']))
         else:
             print("No result")
-    except:
+    except ValueError:
         print("Not a valid JSON")

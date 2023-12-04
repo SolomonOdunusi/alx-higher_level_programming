@@ -17,5 +17,5 @@ if __name__ == "__main__":
 
     try:
         print('{}'.format(resp.json()['id']))
-    except ValueError:
+    except KeyError:
         print("None")

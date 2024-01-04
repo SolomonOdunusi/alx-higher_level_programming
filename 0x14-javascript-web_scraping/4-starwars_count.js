@@ -3,23 +3,21 @@
 // that has “Wedge Antilles”
 const request = require('request');
 
-const apiUrl = process.argv[2];
+const url = process.argv[2];
 
-if (!apiUrl) {
-  console.error('Usage: node 4-starwars_count.js <api-url>');
-  process.exit(1);
-}
+let count = 0;
+request(url, function (err, resp, body) {
 
-const characterId = 18;
-
-request(apiUrl, { json: true }, (err, res, body) => {
-  if (err) {
-    console.error(err);
-  } else if (res.statusCode !== 200) {
-    console.error(`Error: ${res.statusCode} - ${body.detail}`);
+  if (resp.statusCode === 200) {
+    for (const result of JSON.parse(body).results) {
+      for (const character of result.characters) {
+        if (character.includes('18')) {
+          count++;
+        }
+      }
+    }
   } else {
-    const films = body.results;
-    const count = films.filter((film) => film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)).length;
-    console.log(count);
+    console.error(err);
   }
+  console.log(count);
 });

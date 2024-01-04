@@ -27,7 +27,7 @@ request(apiUrl, { json: true }, (err, res, body) => {
           if (err) {
             reject(err);
           } else if (res.statusCode !== 200) {
-            reject(`Error: ${res.statusCode} - ${body.detail}`);
+            reject(new Error(`Error: ${res.statusCode} - ${body.detail}`));
           } else {
             resolve(body.name);
           }

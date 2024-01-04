@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// prints the title of a Star Wars movie 
+// prints the title of a Star Wars movie
 // has a given int
 const request = require('request');
 

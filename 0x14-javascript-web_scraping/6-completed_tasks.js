@@ -32,4 +32,3 @@ request(apiUrl, { json: true }, (err, res, body) => {
     console.log(completedTasksByUser);
   }
 });
-
